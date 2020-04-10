@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   resources :saml, only: :index do
     collection do
-      get :sso
-      post :acs
+      get :init
+      post :consume
       get :metadata
       get :logout
     end
